@@ -50,7 +50,7 @@
 
 (defn -main
   "Start the Netty server."
-  []
+  [args]
 
   (println "here")
 
