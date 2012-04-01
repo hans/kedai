@@ -6,7 +6,7 @@ Kedai is an in-memory key-value store written in Clojure. It uses [Netty](http:/
 
 ## Usage
 
-Currently only the *string* datatype is supported. The following operations exist for acting upon string values:
+Any basic datatype supported by Clojure can be used as a key or value in the store. The following operations exist for acting upon string values:
 
 * `set`: Sets a string key and value
 * `unset`: Unsets a string key from the store
