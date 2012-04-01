@@ -5,6 +5,12 @@
 ;; This Ref holds the key-value store for the current instance.
 (def dict (ref {}))
 
+(defn count
+  "Returns the number of key/value pairs in the store."
+  []
+
+  (clojure.core/count @dict))
+
 (defmacro set
   "Set a value for a key in the store. If the key already exists in the store,
    its value is updated.

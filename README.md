@@ -8,10 +8,14 @@ Kedai is an in-memory key-value store written in Clojure. It uses [Netty](http:/
 
 Any basic datatype supported by Clojure can be used as a key or value in the store. The following operations exist for acting upon values:
 
-* `set`: Sets a string key and value
-* `unset`: Unsets a string key from the store
-* `get`: Gets a string value, given a key
-* `exists?`: Returns true if the given key exists
+* `set k v`: Sets a string key and value
+* `unset k`: Unsets a string key from the store
+* `get k`: Gets a string value, given a key
+* `exists? k`: Returns true if the given key exists
+
+General queries:
+
+* `count`: Returns the number of key/value pairs in the store.
 
 Usage from Clojure is extremely simple. Check [kedai/core.clj](https://github.com/hans/kedai/blob/master/src/kedai/core.clj) for basic documentation.
 
