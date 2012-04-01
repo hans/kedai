@@ -1,5 +1,5 @@
 (ns kedai.server
-  (:refer kedai.core)
+  (:require kedai.core)
   (:gen-class)
   (:import
    (org.jboss.netty.bootstrap ServerBootstrap)
