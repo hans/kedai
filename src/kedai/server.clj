@@ -16,11 +16,15 @@
 (def server-port 4242)
 
 (defn parse-command
-  "Parse a command received by the server."
+  "Parse a command received by the server.
+
+   This method qualifies all symbols to be in the `kedai.core` namespace. If any
+   symbol does not exist in the `kedai.core` namespace, it is left alone."
   [command]
 
   (map #(if (symbol? %)
-          (ns-resolve 'kedai.core %)
+          (let [resolved (ns-resolve 'kedai.core %)]
+            (if (nil? resolved) % resolved))
           %)
        (read-string command)))
 
