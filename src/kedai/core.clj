@@ -11,6 +11,22 @@
 
   (clojure.core/count @dict))
 
+(defn keys
+  "Return all keys in the store as a seq.
+
+   Please beware: this returns ALL keys."
+  []
+
+  (clojure.core/keys @dict))
+
+(defn values
+  "Return all values in the store as a seq.
+
+   Please beware: this returns ALL values."
+  []
+
+  (vals @dict))
+
 (defmacro set
   "Set a value for a key in the store. If the key already exists in the store,
    its value is updated.
