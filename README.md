@@ -1,6 +1,6 @@
 # Kedai
 
-### Disclaimer: This is by no means ready for production use. I strongly recommend you do not use it for such cases!
+*Disclaimer: This is by no means ready for production use. I strongly recommend you do not use it for such cases!*
 
 Kedai is an in-memory key-value store written in Clojure. It uses [Netty](http://netty.io/) as a server backend.
 
@@ -16,6 +16,8 @@ Any basic datatype supported by Clojure can be used as a key or value in the sto
 General queries:
 
 * `count`: Returns the number of key/value pairs in the store.
+* `keys`: Returns *all* the keys in the store as a seq.
+* `values`: Returns *all* the values in the store as a seq.
 
 Usage from Clojure is extremely simple. Check [kedai/core.clj](https://github.com/hans/kedai/blob/master/src/kedai/core.clj) for basic documentation.
 
