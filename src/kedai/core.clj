@@ -8,7 +8,7 @@
   [& key-val-list]
 
   `(dosync
-    (alter dict assoc ~@key-val-list)))
+    (boolean (alter dict assoc ~@key-val-list))))
 
 (defmacro unset
   "Unset a key or keys in the store. If the key(s) do not exist, nothing
@@ -16,7 +16,7 @@
   [& keys]
 
   `(dosync
-    (alter dict dissoc ~@keys)))
+    (boolean (alter dict dissoc ~@keys))))
 
 (defn get
   "Get a value by its key from the store."
